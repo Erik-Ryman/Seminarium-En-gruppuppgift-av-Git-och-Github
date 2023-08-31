@@ -6,12 +6,23 @@ h1 {
   text-align: center;
 }
 .git-btn,
-.index-btn {
+.index-btn,
+.btn {
   padding: 16px 36px;
   background-color: #087f5b;
   border: none;
   border-radius: 12px;
   width: 200px;
+}
+.btn {
+  width: 300px;
+  margin: auto;
+}
+.knappar {
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 .git-link,
