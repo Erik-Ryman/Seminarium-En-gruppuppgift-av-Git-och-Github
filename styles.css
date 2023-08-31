@@ -1,0 +1,40 @@
+* {
+  font-family: sans-serif;
+  /* text-align: center; */
+}
+h1 {
+  text-align: center;
+}
+.git-btn,
+.index-btn {
+  padding: 16px 36px;
+  background-color: #087f5b;
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+}
+
+.git-link,
+.index-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+img {
+  /* max-width: 300px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.container {
+  margin: 25px;
+  width: 450px;
+  height: 200px;
+  margin: auto;
+  /* outline: dashed 1px black; */
+}
