@@ -6,6 +6,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
+  margin: 30px 0;
 }
 .btn {
   display: block;
@@ -62,4 +63,12 @@ img {
   height: 200px;
   margin: auto;
   /* outline: dashed 1px black; */
+}
+
+.list li {
+  margin-bottom: 10px !important;
+  list-style: square;
+}
+.list {
+  margin: 30px 10px;
 }
