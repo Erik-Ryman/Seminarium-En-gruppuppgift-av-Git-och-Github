@@ -1,74 +1,73 @@
+/* Common styles for all screen sizes */
 * {
   font-family: sans-serif;
-  /* text-align: center; */
 }
+
 h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   margin: 30px 0;
+  font-size: 48px; /* Adjust font size for larger screens */
 }
-.hackathon {
-  margin-top: 80px;
-  font-size: 50px;
-}
+
 .btn {
   display: block;
   padding: 16px 36px;
   background-color: #087f5b;
   border: none;
   border-radius: 12px;
-  width: 280px;
+  width: 80%;
   margin: auto;
   margin-bottom: 20px;
-}
-
-
-.knappar {
-  display: block;
-  margin: auto;
-  width: 100%;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.git-link,
-.index-link {
-  background-color: #087f5b;
-  border: none;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
   font-size: 18px;
-  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
   cursor: pointer;
-  text-align: center;
+  transition-duration: 0.4s;
 }
-
-a.btn {
-  text-align: center;
+.btn:hover {
+  background-color: #4de499;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 25px auto;
+  max-width: 600px; /* Adjust max-width for larger screens */
 }
 
 img {
-  /* max-width: 300px; */
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-}
-
-.container {
-  margin: 25px;
-  width: 450px;
-  height: 200px;
-  margin: auto;
-  /* outline: dashed 1px black; */
+  margin: 0 auto;
+  max-width: 100%; /* Ensure images are responsive */
 }
 
 .list li {
   margin-bottom: 10px !important;
   list-style: square;
 }
-.list {
-  margin: 30px 10px;
+
+/* Small screens (phones) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  .btn {
+    width: 100%; /* Adjust button width for smaller screens */
+  }
+
+  .container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+  .list li {
+    margin-bottom: 5px !important; /* Adjust margin for smaller screens */
+  }
 }
