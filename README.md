@@ -336,7 +336,205 @@
     - En datatyp som kan innehålla en ordnad uppsättning element.
 
 49. **Funktion av var-nyckelordet och när det bör användas:**
-    - Används för att deklarera variabler när typen kan infereras av kompilatorn.
+
+50. Sista 20 frågorna med kodexempel -----------------------
+
+51. ### Allmänna instuderingsfrågor:
+
+41. **Användning av bibliotek och using-direktivet:**
+   - Exempel: Användning av `using` för att inkludera `System`-namespace och använda `Console`-klassen.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             Console.WriteLine("Hello, World!");
+         }
+     }
+     ```
+
+42. **LINQ och dess användning för att bearbeta samlingar:**
+   - Exempel: Användning av LINQ för att filtrera och projicera en lista av tal.
+     ```csharp
+     using System;
+     using System.Linq;
+     using System.Collections.Generic;
+
+     class Program
+     {
+         static void Main()
+         {
+             List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+
+             var evenSquares = numbers.Where(n => n % 2 == 0).Select(n => n * n);
+
+             foreach (var result in evenSquares)
+             {
+                 Console.WriteLine(result);
+             }
+         }
+     }
+     ```
+
+43. **Asynkron programmering med async och await:**
+   - Exempel: Asynkron metod som simulerar väntetid och användning av `await`.
+     ```csharp
+     using System;
+     using System.Threading.Tasks;
+
+     class Program
+     {
+         static async Task Main()
+         {
+             await DoAsyncOperation();
+         }
+
+         static async Task DoAsyncOperation()
+         {
+             Console.WriteLine("Start async operation");
+             await Task.Delay(2000); // Simulerar en asynkron operation
+             Console.WriteLine("Async operation completed");
+         }
+     }
+     ```
+
+44. **Delegate och dess användning i C#:**
+   - Exempel: Användning av en enkel delegate för att representera en funktion.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         delegate int MathOperation(int x, int y);
+
+         static void Main()
+         {
+             MathOperation add = Add;
+             int result = add(3, 4);
+             Console.WriteLine(result);
+         }
+
+         static int Add(int a, int b)
+         {
+             return a + b;
+         }
+     }
+     ```
+
+45. **Hantering av händelser med event och delegate:**
+   - Exempel: Användning av event och delegate för att hantera en händelse.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         public delegate void EventHandler(string message);
+         public static event EventHandler CustomEvent;
+
+         static void Main()
+         {
+             CustomEvent += DisplayMessage;
+             TriggerEvent("Hello from the event!");
+         }
+
+         static void TriggerEvent(string message)
+         {
+             CustomEvent?.Invoke(message);
+         }
+
+         static void DisplayMessage(string message)
+         {
+             Console.WriteLine(message);
+         }
+     }
+     ```
+
+46. **Lambda-uttryck och dess användning i C#:**
+   - Exempel: Användning av lambda-uttryck för att skapa korta metoder.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             Func<int, int, int> add = (a, b) => a + b;
+             Console.WriteLine(add(3, 4));
+         }
+     }
+     ```
+
+47. **Nullable<T> för att representera nullbara värden:**
+   - Exempel: Användning av `Nullable<T>` för att tillåta null i en int.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             int? nullableInt = null;
+             Console.WriteLine(nullableInt.HasValue); // False
+         }
+     }
+     ```
+
+48. **Tuple och dess användning för att returnera flera värden:**
+   - Exempel: Användning av `Tuple` för att returnera två värden från en metod.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             var result = GetCoordinates();
+             Console.WriteLine($"X: {result.Item1}, Y: {result.Item2}");
+         }
+
+         static Tuple<int, int> GetCoordinates()
+         {
+             return Tuple.Create(10, 20);
+         }
+     }
+     ```
+
+49. **Funktion av var-nyckelordet och när det bör användas:**
+   - Exempel: Användning av `var` när datatypen kan infereras av kompilatorn.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             var name = "John";
+             var age = 30;
+             Console.WriteLine($"Name: {name}, Age: {age}");
+         }
+     }
+     ```
 
 50. **Dynamic typ i C# och dess skillnad från andra datatyper:**
+   - Exempel: Användning av `dynamic` för runtime-typning.
+     ```csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             dynamic dynamicVariable = 10;
+             Console.WriteLine(dynamicVariable);
+
+             dynamicVariable = "Hello";
+             Console.WriteLine(dynamicVariable);
+         }
+     }
+     ```
+    - Används för att deklarera variabler när typen kan infereras av kompilatorn.
+
+52. **Dynamic typ i C# och dess skillnad från andra datatyper:**
     - Tillåter runtime-typning och skiljer sig från statiska typer vid kompilering.
